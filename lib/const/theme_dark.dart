@@ -9,7 +9,6 @@ const Color _inputInfoColor = Colors.white;
 
 ThemeData darkTheme() {
   return ThemeData.dark().copyWith(
-    useMaterial3: false,
     primaryColor: primaryColor,
     shadowColor: Colors.red.withOpacity(0.5),
     focusColor: Colors.white,

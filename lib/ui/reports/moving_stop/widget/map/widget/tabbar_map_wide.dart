@@ -138,10 +138,8 @@ class _TabBarMapWideState extends State<TabBarMapWide>
                                   ? CardStatusDetailWidget(
                                       title: 'SINAL GPS',
                                       icon: MdiIcons.signal,
-                                      value: widget
-                                              .vehicleStatus.gsmSignalLevel!
-                                              .toString() +
-                                          ' %',
+                                      value:
+                                          '${widget.vehicleStatus.gsmSignalLevel!} %',
                                       iconColor: primaryColor,
                                     )
                                   : Container(),
@@ -159,10 +157,9 @@ class _TabBarMapWideState extends State<TabBarMapWide>
                                     return const SizedBox(height: 4);
                                   }),
                                   itemCount: widget.vehicleTrails.length,
-                                  itemBuilder: ((context, _index) {
-                                    int index = widget.vehicleTrails.length -
-                                        _index -
-                                        1;
+                                  itemBuilder: ((context, index) {
+                                    index =
+                                        widget.vehicleTrails.length - index - 1;
                                     return Elevated(
                                       child: Container(
                                         decoration: BoxDecoration(

@@ -10,10 +10,10 @@ class UpdateVehicleScreen extends StatefulWidget {
   final Vehicle vehicle;
 
   const UpdateVehicleScreen({
-    Key? key,
+    super.key,
     this.id,
     required this.vehicle,
-  }) : super(key: key);
+  });
 
   @override
   State<UpdateVehicleScreen> createState() => _UpdateVehicleScreenState();

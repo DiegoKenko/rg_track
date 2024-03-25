@@ -140,9 +140,8 @@ class _MovingStopMapPageMobileState extends State<MovingStopMapPageMobile>
                               ? CardStatusDetailWidget(
                                   title: 'SINAL GPS',
                                   icon: MdiIcons.signal,
-                                  value: state.vehicleStatus.gsmSignalLevel!
-                                          .toString() +
-                                      ' %',
+                                  value:
+                                      '${state.vehicleStatus.gsmSignalLevel!} %',
                                   iconColor: primaryColor,
                                 )
                               : Container(),
@@ -160,9 +159,8 @@ class _MovingStopMapPageMobileState extends State<MovingStopMapPageMobile>
                                 return const SizedBox(height: 6);
                               }),
                               itemCount: state.vehicleTrails.length,
-                              itemBuilder: ((context, _index) {
-                                int index =
-                                    state.vehicleTrails.length - _index - 1;
+                              itemBuilder: ((context, index) {
+                                index = state.vehicleTrails.length - index - 1;
                                 return Elevated(
                                   child: Container(
                                     decoration: BoxDecoration(

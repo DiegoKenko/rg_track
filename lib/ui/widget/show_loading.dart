@@ -6,10 +6,10 @@ class ShowLoading extends StatefulWidget {
   final Duration duration;
 
   const ShowLoading({
-    Key? key,
+    super.key,
     this.tryAgain,
     this.duration = const Duration(seconds: 5),
-  }) : super(key: key);
+  });
 
   @override
   State<ShowLoading> createState() => _ShowLoadingState();

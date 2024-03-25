@@ -10,10 +10,10 @@ class ShowUserScreen extends StatefulWidget {
   final String id;
 
   const ShowUserScreen({
-    Key? key,
+    super.key,
     required this.user,
     required this.id,
-  }) : super(key: key);
+  });
 
   @override
   State<ShowUserScreen> createState() => _ShowUserScreenState();

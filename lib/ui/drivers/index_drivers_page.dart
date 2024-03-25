@@ -15,7 +15,7 @@ import 'package:rg_track/utils/go_route_extension.dart';
 import 'package:rg_track/utils/screen_utils.dart';
 
 class IndexDriversPage extends StatefulWidget {
-  const IndexDriversPage({Key? key}) : super(key: key);
+  const IndexDriversPage({super.key});
 
   @override
   State<IndexDriversPage> createState() => _IndexDriversPageState();

@@ -28,12 +28,12 @@ class DriverForm extends StatefulWidget {
   final Driver? driver;
 
   const DriverForm({
-    Key? key,
+    super.key,
     this.onSave,
     this.willPopUp,
     this.enable = true,
     this.driver,
-  }) : super(key: key);
+  });
 
   @override
   State<DriverForm> createState() => _DriverFormState();

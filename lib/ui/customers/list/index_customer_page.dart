@@ -23,7 +23,7 @@ import 'package:rg_track/utils/go_route_extension.dart';
 import 'package:rg_track/utils/screen_utils.dart';
 
 class IndexCustomersPage extends StatefulWidget {
-  const IndexCustomersPage({Key? key}) : super(key: key);
+  const IndexCustomersPage({super.key});
 
   @override
   State<IndexCustomersPage> createState() => _IndexCustomersPageState();
@@ -125,8 +125,8 @@ class _IndexCustomersPageState extends State<IndexCustomersPage> {
   Future<void> _onUpdateAction(Customer customer) async {
     await routeUpdateCustomer.pushId(context, customer.id, customer);
 
-    await context.read<CustomerListCubit>()
-      ..load(AuthService.instance.user.id ?? '');
+    context.read<CustomerListCubit>()
+      .load(AuthService.instance.user.id ?? '');
   }
 
   void _onDeleteAction(Customer customer) async {
@@ -146,15 +146,15 @@ class _IndexCustomersPageState extends State<IndexCustomersPage> {
               builder: (BuildContext context) =>
                   AlertDialogFails(exception: error));
         }
-        await context.read<CustomerListCubit>()
-          ..load(AuthService.instance.user.id ?? '');
+        context.read<CustomerListCubit>()
+          .load(AuthService.instance.user.id ?? '');
       }
     });
   }
 
   Future<void> _createOne() async {
     await routeStoreCustomer.push(context);
-    await context.read<CustomerListCubit>()
-      ..load(AuthService.instance.user.id ?? '');
+    context.read<CustomerListCubit>()
+      .load(AuthService.instance.user.id ?? '');
   }
 }

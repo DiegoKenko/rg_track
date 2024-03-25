@@ -30,14 +30,14 @@ class FlespiCalcMaxSpeed {
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['begin'] = this.begin;
-    data['end'] = this.end;
-    data['duration'] = this.duration;
-    data['speed'] = this.speed;
-    data['lat'] = this.lat;
-    data['lng'] = this.lng;
-    data['time'] = this.time;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['begin'] = begin;
+    data['end'] = end;
+    data['duration'] = duration;
+    data['speed'] = speed;
+    data['lat'] = lat;
+    data['lng'] = lng;
+    data['time'] = time;
     return data;
   }
 }

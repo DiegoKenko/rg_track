@@ -6,7 +6,7 @@ import 'package:rg_track/ui/widget/app_logo.dart';
 import 'package:rg_track/utils/go_route_extension.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }

@@ -20,7 +20,7 @@ import 'package:rg_track/utils/go_route_extension.dart';
 import 'package:rg_track/utils/screen_utils.dart';
 
 class IndexVehiclesPage extends StatefulWidget {
-  const IndexVehiclesPage({Key? key}) : super(key: key);
+  const IndexVehiclesPage({super.key});
 
   @override
   State<IndexVehiclesPage> createState() => _IndexVehiclesPageState();
@@ -125,7 +125,7 @@ class _IndexVehiclesPageState extends State<IndexVehiclesPage> {
   Future<void> onUpdateAction(Vehicle vehicle) async {
     routeUpdateVehicle.pushId(context, vehicle.id, vehicle).then((value) {
       context.read<VehicleListCubit>()
-        ..refreshVehicles(AuthService.instance.user.id ?? '');
+        .refreshVehicles(AuthService.instance.user.id ?? '');
     });
   }
 

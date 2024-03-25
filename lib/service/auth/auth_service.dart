@@ -13,7 +13,7 @@ class AuthService {
 
   static final AuthService instance = AuthService._internal();
 
-  AuthService._internal() {}
+  AuthService._internal();
 
   void _saveUser(UserEntity user) {
     _user = user;

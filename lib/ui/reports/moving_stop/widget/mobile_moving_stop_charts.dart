@@ -1,5 +1,5 @@
-import 'package:d_chart/d_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:d_chart/d_chart.dart';
 
 class MobileMovingStopCharts extends StatelessWidget {
   final int attention, ok, warning;
@@ -15,13 +15,13 @@ class MobileMovingStopCharts extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 130,
-      child: DChartGauge(
+      child: DChartPieO(
         data: [
-          {'domain': 'Normal', 'measure': ok},
-          {'domain': 'Sem Comunicação', 'measure': warning},
-          {'domain': 'Atenção', 'measure': attention},
+          OrdinalData(domain: 'Normal', measure: ok),
+          OrdinalData(domain: 'Sem Comunicação', measure: warning),
+          OrdinalData(domain: 'Atenção', measure: attention),
         ],
-        fillColor: (Map<String, dynamic> pieData, int? index) {
+        /*     fillColor: (Map<String, dynamic> pieData, int? index) {
           switch (pieData['domain']) {
             case 'Atenção':
               return const Color(0xFFD2232A);
@@ -35,7 +35,7 @@ class MobileMovingStopCharts extends StatelessWidget {
         labelPosition: PieLabelPosition.outside,
         pieLabel: (Map pieData, int? index) {
           return '${pieData['domain']}: ${pieData['measure']}';
-        },
+        }, */
       ),
     );
   }

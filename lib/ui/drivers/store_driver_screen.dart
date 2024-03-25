@@ -8,7 +8,7 @@ import 'package:rg_track/ui/widget/app_logo.dart';
 import 'package:rg_track/utils/context_extension.dart';
 
 class StoreDriverScreen extends StatelessWidget {
-  const StoreDriverScreen({Key? key}) : super(key: key);
+  const StoreDriverScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

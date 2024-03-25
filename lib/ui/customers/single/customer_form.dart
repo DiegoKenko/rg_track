@@ -25,10 +25,10 @@ class CustomerForm extends StatefulWidget {
   final Customer customer;
 
   const CustomerForm({
-    Key? key,
+    super.key,
     required this.formOption,
     required this.customer,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomerForm> createState() => _CustomerFormState();

@@ -20,7 +20,7 @@ import 'package:rg_track/utils/go_route_extension.dart';
 import 'package:rg_track/utils/screen_utils.dart';
 
 class UserListPage extends StatefulWidget {
-  const UserListPage({Key? key}) : super(key: key);
+  const UserListPage({super.key});
 
   @override
   State<UserListPage> createState() => _UserListPageState();

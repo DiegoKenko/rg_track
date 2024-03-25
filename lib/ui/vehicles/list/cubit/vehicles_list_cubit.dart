@@ -25,10 +25,10 @@ class VehicleListCubit extends Cubit<VehiclesListState> {
 
   Future<void> loadVehicles(String userId) async {
     List<Vehicle> vehicles = [];
-    final VehicleGetAllUsecase _vehicleGetAll = VehicleGetAllUsecase();
+    final VehicleGetAllUsecase vehicleGetAll = VehicleGetAllUsecase();
     emit(VehiclesListLoadingState());
     try {
-      await _vehicleGetAll
+      await vehicleGetAll
           .call(AuthService.instance.user.id ?? '', true)
           .fold((success) => vehicles = success, (error) => null);
       emit(VehicleListSuccessfulState(vehicles));

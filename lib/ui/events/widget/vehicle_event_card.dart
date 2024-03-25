@@ -11,11 +11,10 @@ class VehicleEventCard extends StatelessWidget {
   final ModelAction<VehicleEvent> onUpdateAction;
 
   const VehicleEventCard(this.driver,
-      {Key? key,
+      {super.key,
       required this.onDeleteAction,
       required this.onShowAction,
-      required this.onUpdateAction})
-      : super(key: key);
+      required this.onUpdateAction});
 
   @override
   Widget build(BuildContext context) {

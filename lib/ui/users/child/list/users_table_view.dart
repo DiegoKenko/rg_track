@@ -12,12 +12,11 @@ class UsersTableView extends StatelessWidget {
   final ModelAction<UserEntity> onUpdateAction;
 
   const UsersTableView(this.users,
-      {Key? key,
+      {super.key,
       required this.onStatusChangeAction,
       required this.onDeleteAction,
       required this.onShowAction,
-      required this.onUpdateAction})
-      : super(key: key);
+      required this.onUpdateAction});
 
   @override
   Widget build(BuildContext context) {

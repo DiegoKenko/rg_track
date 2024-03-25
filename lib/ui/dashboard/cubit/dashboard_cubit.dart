@@ -44,14 +44,14 @@ class DashboardCubit extends Cubit<DashboardState> {
   }
 
   Future<(int, int, int)> _getDevicesLastStatus(String userId) async {
-    final FlespiServiceChannelMessage _flespiServiceChannelMessage =
+    final FlespiServiceChannelMessage flespiServiceChannelMessage =
         FlespiServiceChannelMessage();
-    final VehicleGetAllUsecase _vehicleGetAll = VehicleGetAllUsecase();
+    final VehicleGetAllUsecase vehicleGetAll = VehicleGetAllUsecase();
     int offline0a6 = 0;
     int offline6a72 = 0;
     int offline72mais = 0;
     List<FlespiChannelMessage> messages = [];
-    List<Vehicle> vehicles = await _vehicleGetAll
+    List<Vehicle> vehicles = await vehicleGetAll
         .call(userId, true)
         .fold((success) => success, (error) => []);
 
@@ -61,7 +61,7 @@ class DashboardCubit extends Cubit<DashboardState> {
 
     for (var element in vehicles) {
       if (element.deviceMainId?.isNotEmpty ?? false) {
-        await _flespiServiceChannelMessage
+        await flespiServiceChannelMessage
             .getMessages(element.deviceMainId!, limit: 1, reverse: true)
             .fold((success) => messages.addAll(success), (error) => []);
       }

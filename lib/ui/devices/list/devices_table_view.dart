@@ -17,13 +17,13 @@ class DevicesTableView extends StatelessWidget {
 
   const DevicesTableView(
     this.devices, {
-    Key? key,
+    super.key,
     required this.onDeleteAction,
     required this.onShowAction,
     required this.onUpdateAction,
     required this.onCheckConnection,
     required this.onShowConnectionConfiguration,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

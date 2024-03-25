@@ -151,9 +151,7 @@ class _WideDashState extends State<MobileDashboard> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        Text((event.eventDescription ?? '') +
-                                            ': ' +
-                                            (event.value.toString() + '   ')),
+                                        Text('${event.eventDescription ?? ''}: ${event.value}   '),
                                       ],
                                     )),
                                     DataCell(Column(
@@ -165,8 +163,7 @@ class _WideDashState extends State<MobileDashboard> {
                                             : event.date!.formatDataDmy()),
                                         Text(event.date == null
                                             ? ''
-                                            : ' ' +
-                                                event.date!.formatDataHMS()),
+                                            : ' ${event.date!.formatDataHMS()}'),
                                       ],
                                     )),
                                   ],

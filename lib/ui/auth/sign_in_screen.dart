@@ -10,7 +10,7 @@ import 'package:rg_track/ui/widget/app_logo.dart';
 import 'package:rg_track/utils/go_route_extension.dart';
 
 class SignInScreen extends StatefulWidget {
-  const SignInScreen({Key? key}) : super(key: key);
+  const SignInScreen({super.key});
 
   @override
   State<SignInScreen> createState() => _SignInScreenState();

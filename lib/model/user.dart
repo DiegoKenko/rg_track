@@ -33,7 +33,7 @@ class UserEntity {
 
   String get simpleID => id?.substring(0, 8) ?? '';
 
-  bool get authorized => this.id != null;
+  bool get authorized => id != null;
 
   UserEntity.commom({
     this.id,

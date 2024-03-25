@@ -6,11 +6,11 @@ class RowOrColumn extends StatelessWidget {
   final bool removeExpanded;
 
   const RowOrColumn({
-    Key? key,
+    super.key,
     required this.mode,
     required this.children,
     this.removeExpanded = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

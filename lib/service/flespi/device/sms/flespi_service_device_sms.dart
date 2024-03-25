@@ -12,10 +12,10 @@ class FlespiServiceDeviceSms {
     if (deviceId.isEmpty || sms.name.isEmpty) {
       return Failure(ErrorEntity(code: EnumErrorCode.e04450, message: ''));
     }
-    final String _url =
-        flespiBasePath + flespiDevicePath + '/' + deviceId + flespiSmsPath;
+    final String url =
+        '$flespiBasePath$flespiDevicePath/$deviceId$flespiSmsPath';
     return await flespiService.post(
-      _url,
+      url,
       data: [sms.toMap()],
     ).fold((success) {
       return true.toSuccess();

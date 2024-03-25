@@ -15,7 +15,7 @@ class TagsManager<T extends Object> extends StatefulWidget {
   final EdgeInsets margin;
 
   TagsManager({
-    Key? key,
+    super.key,
     required this.parseTitle,
     required this.onChange,
     this.fetchItems,
@@ -27,8 +27,7 @@ class TagsManager<T extends Object> extends StatefulWidget {
     this.margin = const EdgeInsets.all(0),
     this.label = "",
     List<T>? initialTags,
-  })  : initialTags = initialTags ?? [],
-        super(key: key);
+  })  : initialTags = initialTags ?? [];
 
   @override
   State<TagsManager> createState() => _TagsManagerState<T>();
@@ -75,7 +74,7 @@ class _TagsManagerState<T extends Object> extends State<TagsManager> {
                         removeTag(e);
                       },
                     ))
-                .toList(),
+                ,
             SizedBox(
                 child: Padding(
               padding: const EdgeInsets.all(8),

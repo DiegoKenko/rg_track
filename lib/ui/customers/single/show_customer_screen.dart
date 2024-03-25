@@ -10,10 +10,10 @@ class ShowCustomerScreen extends StatefulWidget {
   final Customer customer;
 
   const ShowCustomerScreen({
-    Key? key,
+    super.key,
     this.id,
     required this.customer,
-  }) : super(key: key);
+  });
 
   @override
   State<ShowCustomerScreen> createState() => _ShowCustomerScreenState();

@@ -7,7 +7,7 @@ import 'package:rg_track/service/flespi/flespi_service.dart';
 class FlespiServiceDevice {
   final String baseUrl = flespiBasePath + flespiDevicePath;
   final FlespiService flespiService = FlespiService();
-  FlespiServiceDevice() {}
+  FlespiServiceDevice();
 
   Future<Result<FlespiDevice, ErrorEntity>> get(FlespiDevice device) async {
     return await flespiService.get(baseUrl, params: device.toMap()).fold(
@@ -19,7 +19,7 @@ class FlespiServiceDevice {
   Future<Result<bool, ErrorEntity>> delete(String deviceId) async {
     return await flespiService
         .delete(
-      baseUrl + '/' + deviceId,
+      '$baseUrl/$deviceId',
     )
         .fold((success) {
       return true.toSuccess();

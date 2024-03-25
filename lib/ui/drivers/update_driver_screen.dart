@@ -15,10 +15,10 @@ class UpdateDriverScreen extends StatefulWidget {
   final Driver? driver;
 
   const UpdateDriverScreen({
-    Key? key,
+    super.key,
     this.id,
     this.driver,
-  }) : super(key: key);
+  });
 
   @override
   State<UpdateDriverScreen> createState() => _UpdateDriverScreenState();

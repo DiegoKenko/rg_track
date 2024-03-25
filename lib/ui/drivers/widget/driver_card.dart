@@ -11,11 +11,10 @@ class DriverCard extends StatelessWidget {
   final ModelAction<Driver> onUpdateAction;
 
   const DriverCard(this.driver,
-      {Key? key,
+      {super.key,
       required this.onDeleteAction,
       required this.onShowAction,
-      required this.onUpdateAction})
-      : super(key: key);
+      required this.onUpdateAction});
 
   @override
   Widget build(BuildContext context) {

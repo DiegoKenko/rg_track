@@ -15,10 +15,10 @@ class UpdateVehicleEventScreen extends StatefulWidget {
   final VehicleEvent? vehicleEvent;
 
   const UpdateVehicleEventScreen({
-    Key? key,
+    super.key,
     this.id,
     this.vehicleEvent,
-  }) : super(key: key);
+  });
 
   @override
   State<UpdateVehicleEventScreen> createState() =>

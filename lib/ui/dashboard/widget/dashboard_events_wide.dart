@@ -109,7 +109,7 @@ class _DashboardEventsWideState extends State<DashboardEventsWide> {
                             )),
                             DataCell(Text(e.vehicle?.licensePlate ?? '')),
                             DataCell(Text(e.eventDescription ?? '')),
-                            DataCell(Text(' ' + e.value.toString() + ' ')),
+                            DataCell(Text(' ${e.value} ')),
                             DataCell(Text(
                                 e.date == null ? '' : e.date!.formatDataDmy())),
                             DataCell(Text(

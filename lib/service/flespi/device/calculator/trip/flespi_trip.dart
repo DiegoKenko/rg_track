@@ -23,7 +23,6 @@ class FlespiTrip {
   FlespiTrip.fromMap(Map<String, dynamic> json) {
     begin = json['begin']?.toDouble();
     end = json['end']?.toDouble();
-    ;
     duration = json['duration']?.toDouble();
 
     maxSpeed = json['max.speed']?.toDouble();
@@ -31,26 +30,25 @@ class FlespiTrip {
     points = <Points>[];
     if (json['points'] != null) {
       if (json['points'] is List) {
-        (json['points'] as List).forEach((v) {
-          points.add(new Points.fromJson(v));
-        });
+        for (var v in (json['points'] as List)) {
+          points.add(Points.fromJson(v));
+        }
       }
     }
     route = json['route'];
     avgSpeed = json['avg.speed']?.toDouble();
-    ;
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['begin'] = this.begin;
-    data['end'] = this.end;
-    data['duration'] = this.duration;
-    data['max.speed'] = this.maxSpeed;
-    data['distance'] = this.distance;
-    data['points'] = this.points.map((v) => v.toJson()).toList();
-    data['route'] = this.route;
-    data['avg.speed'] = this.avgSpeed;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['begin'] = begin;
+    data['end'] = end;
+    data['duration'] = duration;
+    data['max.speed'] = maxSpeed;
+    data['distance'] = distance;
+    data['points'] = points.map((v) => v.toJson()).toList();
+    data['route'] = route;
+    data['avg.speed'] = avgSpeed;
     return data;
   }
 }

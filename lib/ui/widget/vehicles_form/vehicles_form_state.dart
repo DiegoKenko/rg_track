@@ -8,22 +8,19 @@ abstract class VehiclesFormState {
 }
 
 class VehiclesFormInitial extends VehiclesFormState {
-  const VehiclesFormInitial(List<Vehicle> all, List<Vehicle> selected)
-      : super(all, selected);
+  const VehiclesFormInitial(super.all, super.selected);
 
   const VehiclesFormInitial.empty() : super(const [], const []);
 }
 
 class VehiclesFormLoadingState extends VehiclesFormState {
-  const VehiclesFormLoadingState(List<Vehicle> all, List<Vehicle> selected)
-      : super(all, selected);
+  const VehiclesFormLoadingState(super.all, super.selected);
 
   const VehiclesFormLoadingState.empty() : super(const [], const []);
 }
 
 class VehiclesFormLoadedState extends VehiclesFormState {
-  const VehiclesFormLoadedState(List<Vehicle> all, List<Vehicle> selected)
-      : super(all, selected);
+  const VehiclesFormLoadedState(super.all, super.selected);
 
   const VehiclesFormLoadedState.empty() : super(const [], const []);
 }

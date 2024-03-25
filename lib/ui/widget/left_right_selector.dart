@@ -81,7 +81,7 @@ class LeftRightSelector<T> extends StatelessWidget {
                             },
                           ),
                         )
-                        .toList()
+                        
                   ],
                 ),
               ),
@@ -137,7 +137,7 @@ class LeftRightSelector<T> extends StatelessWidget {
                             },
                           ),
                         )
-                        .toList()
+                        
                   ],
                 ),
               ),

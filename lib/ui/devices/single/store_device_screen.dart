@@ -7,7 +7,7 @@ import 'package:rg_track/ui/widget/app_body.dart';
 import 'package:rg_track/ui/widget/app_logo.dart';
 
 class StoreDeviceScreen extends StatefulWidget {
-  const StoreDeviceScreen({Key? key}) : super(key: key);
+  const StoreDeviceScreen({super.key});
 
   @override
   State<StoreDeviceScreen> createState() => _StoreDeviceScreenState();

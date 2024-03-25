@@ -7,14 +7,14 @@ import 'package:rg_track/service/flespi/flespi_service.dart';
 class FlespiServiceChannel {
   final String baseChannelUrl = flespiBasePath + flespiChannelPath;
   final FlespiService flespiService = FlespiService();
-  FlespiServiceChannel() {}
+  FlespiServiceChannel();
 
   Future<Result<FlespiChannel, ErrorEntity>> get(
     String channelId,
   ) async {
     return await flespiService
         .get(
-      baseChannelUrl + '/' + channelId,
+      '$baseChannelUrl/$channelId',
     )
         .fold((success) {
       return FlespiChannel.fromMap(success).toSuccess();
@@ -35,7 +35,7 @@ class FlespiServiceChannel {
   ) async {
     return await flespiService
         .delete(
-      baseChannelUrl + '/' + channelId,
+      '$baseChannelUrl/$channelId',
     )
         .fold((success) {
       return true.toSuccess();

@@ -82,7 +82,7 @@ class Event {
       lat: flespiCalcMaxSpeed.lat,
       lng: flespiCalcMaxSpeed.lng,
       eventDescription: 'Velocidade máxima excedida',
-      value: flespiCalcMaxSpeed.speed.toString() + ' km/h',
+      value: '${flespiCalcMaxSpeed.speed} km/h',
     );
   }
   factory Event.fromFlespiCalcCutPower(

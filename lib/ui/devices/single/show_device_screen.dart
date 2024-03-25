@@ -9,9 +9,9 @@ class ShowDeviceScreen extends StatefulWidget {
   final Device device;
 
   const ShowDeviceScreen({
-    Key? key,
+    super.key,
     required this.device,
-  }) : super(key: key);
+  });
 
   @override
   State<ShowDeviceScreen> createState() => _ShowDeviceScreenState();

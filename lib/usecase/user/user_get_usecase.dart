@@ -6,12 +6,12 @@ import 'package:rg_track/model/user.dart';
 
 class UserGetUsecase {
   Future<Result<UserEntity, ErrorEntity>> call(String id) async {
-    UserDatasource _userDatasource = UserDatasource();
+    UserDatasource userDatasource = UserDatasource();
 
     if (id.isEmpty) {
       return Failure(ErrorEntity.empty());
     }
 
-    return await _userDatasource.getUser(id);
+    return await userDatasource.getUser(id);
   }
 }

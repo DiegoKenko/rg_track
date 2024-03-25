@@ -8,7 +8,7 @@ import 'package:rg_track/ui/widget/app_logo.dart';
 import 'package:rg_track/utils/context_extension.dart';
 
 class StoreVehicleEventScreen extends StatelessWidget {
-  const StoreVehicleEventScreen({Key? key}) : super(key: key);
+  const StoreVehicleEventScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

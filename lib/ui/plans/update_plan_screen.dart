@@ -15,10 +15,10 @@ class UpdatePlanScreen extends StatefulWidget {
   final Plan? plan;
 
   const UpdatePlanScreen({
-    Key? key,
+    super.key,
     this.id,
     this.plan,
-  }) : super(key: key);
+  });
 
   @override
   State<UpdatePlanScreen> createState() => _UpdatePlanScreenState();

@@ -5,7 +5,7 @@ import 'package:rg_track/ui/widget/app_body.dart';
 import 'package:rg_track/ui/widget/app_logo.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
   State<MainScreen> createState() => _MainScreenState();

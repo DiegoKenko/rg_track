@@ -7,10 +7,10 @@ class FormTitle extends StatelessWidget {
 
   const FormTitle(
     this.title, {
-    Key? key,
+    super.key,
     this.subtitle,
     this.padding = const EdgeInsets.all(8.0),
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

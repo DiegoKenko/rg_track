@@ -16,7 +16,6 @@ const BorderRadius borderRadius = BorderRadius.all(Radius.circular(15));
 
 ThemeData theme() {
   return ThemeData.light().copyWith(
-    useMaterial3: false,
     primaryColor: primaryColor,
     shadowColor: Colors.black.withOpacity(0.5),
     focusColor: _inputInfoColor,

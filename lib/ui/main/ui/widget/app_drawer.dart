@@ -20,10 +20,10 @@ class AppDrawer extends StatefulWidget {
   final Permission? currentSelected;
 
   const AppDrawer({
-    Key? key,
+    super.key,
     required this.onChange,
     required this.currentSelected,
-  }) : super(key: key);
+  });
 
   @override
   State<AppDrawer> createState() => _AppDrawerState();

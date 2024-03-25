@@ -64,98 +64,98 @@ class FlespiChannelMessage {
       double? timestamp,
       int? vehicleMileage}) {
     if (batteryChargingStatus != null) {
-      this._batteryChargingStatus = batteryChargingStatus;
+      _batteryChargingStatus = batteryChargingStatus;
     }
     if (batteryVoltage != null) {
-      this._batteryVoltage = batteryVoltage;
+      _batteryVoltage = batteryVoltage;
     }
     if (channelId != null) {
-      this._channelId = channelId;
+      _channelId = channelId;
     }
     if (_deviceId != null) {
-      this._deviceId = deviceId;
+      _deviceId = deviceId;
     }
     if (_deviceTypeId != null) {
-      this._deviceTypeId = deviceId;
+      _deviceTypeId = deviceId;
     }
 
     if (engineBlockedStatus != null) {
-      this._engineBlockedStatus = engineBlockedStatus;
+      _engineBlockedStatus = engineBlockedStatus;
     }
     if (engineIgnitionStatus != null) {
-      this._engineIgnitionStatus = engineIgnitionStatus;
+      _engineIgnitionStatus = engineIgnitionStatus;
     }
     if (engineMotorhours != null) {
-      this._engineMotorhours = engineMotorhours;
+      _engineMotorhours = engineMotorhours;
     }
     if (externalPowersourceVoltage != null) {
-      this._externalPowersourceVoltage = externalPowersourceVoltage.toDouble();
+      _externalPowersourceVoltage = externalPowersourceVoltage.toDouble();
     }
     if (gnssStatus != null) {
-      this._gnssStatus = gnssStatus;
+      _gnssStatus = gnssStatus;
     }
     if (gsmCellid != null) {
-      this._gsmCellid = gsmCellid;
+      _gsmCellid = gsmCellid;
     }
     if (gsmLac != null) {
-      this._gsmLac = gsmLac;
+      _gsmLac = gsmLac;
     }
     if (gsmMcc != null) {
-      this._gsmMcc = gsmMcc;
+      _gsmMcc = gsmMcc;
     }
     if (gsmMnc != null) {
-      this._gsmMnc = gsmMnc;
+      _gsmMnc = gsmMnc;
     }
     if (gsmSignalLevel != null) {
-      this._gsmSignalLevel = gsmSignalLevel;
+      _gsmSignalLevel = gsmSignalLevel;
     }
     if (ident != null) {
-      this._ident = ident;
+      _ident = ident;
     }
     if (languageEnum != null) {
-      this._languageEnum = languageEnum;
+      _languageEnum = languageEnum;
     }
     if (messageBufferedStatus != null) {
-      this._messageBufferedStatus = messageBufferedStatus;
+      _messageBufferedStatus = messageBufferedStatus;
     }
     if (peer != null) {
-      this._peer = peer;
+      _peer = peer;
     }
     if (positionDirection != null) {
-      this._positionDirection = positionDirection;
+      _positionDirection = positionDirection;
     }
     if (positionLatitude != null) {
-      this._positionLatitude = positionLatitude;
+      _positionLatitude = positionLatitude;
     }
     if (positionLongitude != null) {
-      this._positionLongitude = positionLongitude;
+      _positionLongitude = positionLongitude;
     }
     if (positionSatellites != null) {
-      this._positionSatellites = positionSatellites;
+      _positionSatellites = positionSatellites;
     }
     if (positionSpeed != null) {
-      this._positionSpeed = positionSpeed;
+      _positionSpeed = positionSpeed;
     }
     if (positionTimestamp != null) {
-      this._positionTimestamp = positionTimestamp;
+      _positionTimestamp = positionTimestamp;
     }
     if (positionValid != null) {
-      this._positionValid = positionValid;
+      _positionValid = positionValid;
     }
     if (protocolId != null) {
-      this._protocolId = protocolId;
+      _protocolId = protocolId;
     }
     if (protocolNumber != null) {
-      this._protocolNumber = protocolNumber;
+      _protocolNumber = protocolNumber;
     }
     if (serverTimestamp != null) {
-      this._serverTimestamp = serverTimestamp;
+      _serverTimestamp = serverTimestamp;
     }
     if (timestamp != null) {
-      this._timestamp = timestamp;
+      _timestamp = timestamp;
     }
     if (vehicleMileage != null) {
-      this._vehicleMileage = vehicleMileage;
+      _vehicleMileage = vehicleMileage;
     }
   }
 
@@ -272,38 +272,38 @@ class FlespiChannelMessage {
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['battery.charging.status'] = this._batteryChargingStatus;
-    data['battery.voltage'] = this._batteryVoltage;
-    data['channel.id'] = this._channelId;
-    data['device.id'] = this._deviceId;
-    data['device.type.id'] = this._deviceTypeId;
-    data['engine.blocked.status'] = this._engineBlockedStatus;
-    data['engine.ignition.status'] = this._engineIgnitionStatus;
-    data['engine.motorhours'] = this._engineMotorhours;
-    data['external.powersource.voltage'] = this._externalPowersourceVoltage;
-    data['gnss.status'] = this._gnssStatus;
-    data['gsm.cellid'] = this._gsmCellid;
-    data['gsm.lac'] = this._gsmLac;
-    data['gsm.mcc'] = this._gsmMcc;
-    data['gsm.mnc'] = this._gsmMnc;
-    data['gsm.signal.level'] = this._gsmSignalLevel;
-    data['ident'] = this._ident;
-    data['language.enum'] = this._languageEnum;
-    data['message.buffered.status'] = this._messageBufferedStatus;
-    data['peer'] = this._peer;
-    data['position.direction'] = this._positionDirection;
-    data['position.latitude'] = this._positionLatitude;
-    data['position.longitude'] = this._positionLongitude;
-    data['position.satellites'] = this._positionSatellites;
-    data['position.speed'] = this._positionSpeed;
-    data['position.timestamp'] = this._positionTimestamp;
-    data['position.valid'] = this._positionValid;
-    data['protocol.id'] = this._protocolId;
-    data['protocol.number'] = this._protocolNumber;
-    data['server.timestamp'] = this._serverTimestamp;
-    data['timestamp'] = this._timestamp;
-    data['vehicle.mileage'] = this._vehicleMileage;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['battery.charging.status'] = _batteryChargingStatus;
+    data['battery.voltage'] = _batteryVoltage;
+    data['channel.id'] = _channelId;
+    data['device.id'] = _deviceId;
+    data['device.type.id'] = _deviceTypeId;
+    data['engine.blocked.status'] = _engineBlockedStatus;
+    data['engine.ignition.status'] = _engineIgnitionStatus;
+    data['engine.motorhours'] = _engineMotorhours;
+    data['external.powersource.voltage'] = _externalPowersourceVoltage;
+    data['gnss.status'] = _gnssStatus;
+    data['gsm.cellid'] = _gsmCellid;
+    data['gsm.lac'] = _gsmLac;
+    data['gsm.mcc'] = _gsmMcc;
+    data['gsm.mnc'] = _gsmMnc;
+    data['gsm.signal.level'] = _gsmSignalLevel;
+    data['ident'] = _ident;
+    data['language.enum'] = _languageEnum;
+    data['message.buffered.status'] = _messageBufferedStatus;
+    data['peer'] = _peer;
+    data['position.direction'] = _positionDirection;
+    data['position.latitude'] = _positionLatitude;
+    data['position.longitude'] = _positionLongitude;
+    data['position.satellites'] = _positionSatellites;
+    data['position.speed'] = _positionSpeed;
+    data['position.timestamp'] = _positionTimestamp;
+    data['position.valid'] = _positionValid;
+    data['protocol.id'] = _protocolId;
+    data['protocol.number'] = _protocolNumber;
+    data['server.timestamp'] = _serverTimestamp;
+    data['timestamp'] = _timestamp;
+    data['vehicle.mileage'] = _vehicleMileage;
     return data;
   }
 }

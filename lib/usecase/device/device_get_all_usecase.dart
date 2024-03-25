@@ -7,22 +7,22 @@ import 'package:rg_track/model/user.dart';
 
 class DeviceGetAllUsecase {
   Future<List<Device>> call(UserEntity user, bool customersDevices) async {
-    DeviceGetAllDatasource _deviceDatasource = DeviceGetAllDatasource();
-    CustomerDatasource _customerDatasource = CustomerDatasource();
+    DeviceGetAllDatasource deviceDatasource = DeviceGetAllDatasource();
+    CustomerDatasource customerDatasource = CustomerDatasource();
     List<Device> devices = [];
 
-    await _deviceDatasource.getDevicesUser(user.id ?? '').fold((success) {
+    await deviceDatasource.getDevicesUser(user.id ?? '').fold((success) {
       devices.addAll(success);
     }, (error) {
       return null;
     });
     if (customersDevices) {
-      List<Customer> customers = await _customerDatasource
+      List<Customer> customers = await customerDatasource
           .getCustomersUser(user.id ?? '')
           .fold((success) => success, (error) => []);
 
       for (var element in customers) {
-        await _deviceDatasource.getDevicesUser(element.id ?? '').fold(
+        await deviceDatasource.getDevicesUser(element.id ?? '').fold(
             (success) {
           devices.addAll(success);
         }, (error) {

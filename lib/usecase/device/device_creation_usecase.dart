@@ -13,72 +13,72 @@ import 'package:rg_track/service/flespi/flespi_base.dart';
 
 class DeviceCreationUsecase {
   Future<Result<Device, ErrorEntity>> call(Device device) async {
-    FlespiChannel? _flespiChannel;
-    ErrorEntity? _error;
-    FlespiDevice? _flespiDevice = FlespiDeviceAdapter().call(device);
+    FlespiChannel? flespiChannel;
+    ErrorEntity? error;
+    FlespiDevice? flespiDevice = FlespiDeviceAdapter().call(device);
 
-    if (_flespiDevice != null) {
-      await _getChannel(_flespiDevice).fold(
-        (success) => _flespiChannel = success,
-        (e) => _error = e,
+    if (flespiDevice != null) {
+      await _getChannel(flespiDevice).fold(
+        (success) => flespiChannel = success,
+        (e) => error = e,
       );
     }
-    if (_error != null) {
-      _revert(_flespiDevice);
-      return _error!.toFailure();
+    if (error != null) {
+      _revert(flespiDevice);
+      return error!.toFailure();
     }
 
-    if (_flespiChannel != null && _error == null) {
-      await _createDevice(device, _flespiDevice!, _flespiChannel!).fold(
+    if (flespiChannel != null && error == null) {
+      await _createDevice(device, flespiDevice!, flespiChannel!).fold(
           (success) {
         device = success;
-      }, (e) => _error = e);
+      }, (e) => error = e);
     }
 
-    if (_error != null) {
-      _revert(_flespiDevice);
-      return _error!.toFailure();
+    if (error != null) {
+      _revert(flespiDevice);
+      return error!.toFailure();
     }
 
     await FlespiServiceCalculatorAssign()
         .call(device.id ?? '', flespiCalcTripDetector.toString())
         .onFailure((failure) {
-      _error = failure;
+      error = failure;
     });
 
     await FlespiServiceCalculatorAssign()
         .call(device.id ?? '', flespiCalcCutPower.toString())
         .onFailure((failure) {
-      _error = failure;
+      error = failure;
     });
 
-    if (_error != null) {
-      _revert(_flespiDevice);
-      return _error!.toFailure();
+    if (error != null) {
+      _revert(flespiDevice);
+      return error!.toFailure();
     }
 
     await FlespiServiceDeviceCommand()
         .sendCommandQueue(
             device.id ?? '',
-            _flespiDevice!.connectServerCommand(
-                _flespiChannel!.host!, _flespiChannel!.port!))
+            flespiDevice!.connectServerCommand(
+                flespiChannel!.host!, flespiChannel!.port!))
         .fold((success) {}, (failure) {
-      _error = failure;
+      error = failure;
     });
 
-    if (_error != null) {
-      _revert(_flespiDevice);
-      return _error!.toFailure();
+    if (error != null) {
+      _revert(flespiDevice);
+      return error!.toFailure();
     }
 
     if (device.channelId == null) {
-      _revert(_flespiDevice);
+      _revert(flespiDevice);
       return ErrorEntity(code: EnumErrorCode.e04211, message: '').toFailure();
     }
     if (device.id?.isNotEmpty ?? false) {
       return device.toSuccess();
     } else {
-      return _error!.toFailure();
+      return error!.toFailure();
     }
   }
 

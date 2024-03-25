@@ -99,9 +99,7 @@ class _MovingStopEventsMobileState extends State<MovingStopEventsMobile> {
                                       ),
                                     ),
                                     DataCell(Text(vehicle.licensePlate ?? '')),
-                                    DataCell(Text((vehicle.manufacturer ?? '') +
-                                        ' ' +
-                                        (vehicle.model ?? ''))),
+                                    DataCell(Text('${vehicle.manufacturer ?? ''} ${vehicle.model ?? ''}')),
                                   ],
                                 );
                               }).toList()

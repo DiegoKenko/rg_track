@@ -8,7 +8,7 @@ import 'package:rg_track/service/flespi/flespi_service_multiple.dart';
 class FlespiServiceCalculatorMaxSpeed {
   final String baseChannelUrl = flespiBasePath + flespiDevicePath;
   final FlespiServiceMultiple flespiServiceMultiple = FlespiServiceMultiple();
-  FlespiServiceCalculatorMaxSpeed() {}
+  FlespiServiceCalculatorMaxSpeed();
 
   Future<Result<List<FlespiCalcMaxSpeed>, ErrorEntity>> getMaxsSpeed(
     String deviceId,
@@ -18,7 +18,7 @@ class FlespiServiceCalculatorMaxSpeed {
       return Failure(ErrorEntity(code: EnumErrorCode.e04210, message: ''));
     }
     return await flespiServiceMultiple
-        .post(baseChannelUrl + '/' + deviceId + flespiCalculatePath, data: {
+        .post('$baseChannelUrl/$deviceId$flespiCalculatePath', data: {
       "calc_id": maxSpeed.calcId,
     }).fold((success) {
       return success

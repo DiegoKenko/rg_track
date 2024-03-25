@@ -25,7 +25,7 @@ import 'package:rg_track/utils/go_route_extension.dart';
 import 'package:rg_track/utils/screen_utils.dart';
 
 class IndexDevicesPage extends StatefulWidget {
-  const IndexDevicesPage({Key? key}) : super(key: key);
+  const IndexDevicesPage({super.key});
 
   @override
   State<IndexDevicesPage> createState() => _IndexDevicesPageState();
@@ -140,8 +140,8 @@ class _IndexDevicesPageState extends State<IndexDevicesPage> {
 
   Future<void> _onUpdateAction(Device device) async {
     await routeUpdateDevice.pushId(context, device.id, device);
-    await devicesListCubit
-      ..loadDevices(AuthService.instance.user);
+    devicesListCubit
+      .loadDevices(AuthService.instance.user);
   }
 
   Future<void> _onDeleteAction(Device device) async {
@@ -151,16 +151,16 @@ class _IndexDevicesPageState extends State<IndexDevicesPage> {
     ).then((bool? value) async {
       if (value ?? false) {
         await devicesListCubit.delete(device).fold((success) {}, (e) {});
-        await devicesListCubit
-          ..loadDevices(AuthService.instance.user);
+        devicesListCubit
+          .loadDevices(AuthService.instance.user);
       }
     });
   }
 
   Future<void> _createOne() async {
     await routeStoreDevice.push(context);
-    await devicesListCubit
-      ..loadDevices(AuthService.instance.user);
+    devicesListCubit
+      .loadDevices(AuthService.instance.user);
   }
 
   Future<void> _onCheckConnection(Device device) async {

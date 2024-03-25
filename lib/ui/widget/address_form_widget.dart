@@ -14,13 +14,13 @@ class AddressFormWidget extends StatefulWidget {
   final FocusNode? focus, nextFocus;
 
   const AddressFormWidget({
-    Key? key,
+    super.key,
     this.enable = true,
     this.address,
     this.onChange,
     this.focus,
     this.nextFocus,
-  }) : super(key: key);
+  });
 
   @override
   State<AddressFormWidget> createState() => _AddressFormWidgetState();

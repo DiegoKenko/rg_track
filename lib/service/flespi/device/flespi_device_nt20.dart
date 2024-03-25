@@ -15,6 +15,7 @@ class FlespiDeviceNT20 extends FlespiDevice {
           deviceTypeId: _deviceTypeId,
         );
 
+  @override
   Map<String, dynamic> toMap() {
     return {
       "configuration": {"ident": imei, "settings_polling": "once"},
@@ -43,6 +44,7 @@ class FlespiDeviceNT20 extends FlespiDevice {
     return 'TIMER,$seconds#';
   }
 
+  @override
   String timerStatic(int hours) {
     return 'STATIC,$hours#';
   }

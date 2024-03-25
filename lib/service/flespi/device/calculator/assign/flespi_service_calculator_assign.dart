@@ -11,14 +11,8 @@ class FlespiServiceCalculatorAssign {
     if (deviceId.isEmpty || calculatorId.isEmpty) {
       return Failure(ErrorEntity(code: EnumErrorCode.e04602, message: ''));
     }
-    final String _url = flespiBasePath +
-        flespiCalculatorsPath +
-        '/' +
-        calculatorId +
-        '/devices' +
-        '/' +
-        deviceId;
-    return await flespiService.post(_url).fold((success) {
+    final String url = '$flespiBasePath$flespiCalculatorsPath/$calculatorId/devices/$deviceId';
+    return await flespiService.post(url).fold((success) {
       return true.toSuccess();
     },
         (error) =>

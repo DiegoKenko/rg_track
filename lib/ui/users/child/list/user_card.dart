@@ -12,11 +12,10 @@ class UserCard extends StatelessWidget {
   final ModelAction<UserEntity> onUpdateAction;
 
   const UserCard(this.user,
-      {Key? key,
+      {super.key,
       required this.onDeleteAction,
       required this.onShowAction,
-      required this.onUpdateAction})
-      : super(key: key);
+      required this.onUpdateAction});
 
   @override
   Widget build(BuildContext context) {

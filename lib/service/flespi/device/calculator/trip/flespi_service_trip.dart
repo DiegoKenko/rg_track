@@ -7,7 +7,7 @@ import 'package:rg_track/service/flespi/flespi_service_multiple.dart';
 class FlespiServiceCalculatorTrip {
   final String baseChannelUrl = flespiBasePath + flespiDevicePath;
   final FlespiServiceMultiple flespiServiceMultiple = FlespiServiceMultiple();
-  FlespiServiceCalculatorTrip() {}
+  FlespiServiceCalculatorTrip();
 
   Future<Result<List<FlespiTrip>, ErrorEntity>> getTrips(
       String deviceId) async {
@@ -15,7 +15,7 @@ class FlespiServiceCalculatorTrip {
       return Failure(ErrorEntity(code: EnumErrorCode.e04210, message: ''));
     }
     return await flespiServiceMultiple
-        .post(baseChannelUrl + '/' + deviceId + flespiCalculatePath, data: {
+        .post('$baseChannelUrl/$deviceId$flespiCalculatePath', data: {
       "calc_id": flespiCalcTripDetector,
     }).fold((success) {
       return success.map((e) => FlespiTrip.fromMap(e)).toList().toSuccess();

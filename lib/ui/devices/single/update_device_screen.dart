@@ -9,9 +9,9 @@ class UpdateDeviceScreen extends StatefulWidget {
   final Device device;
 
   const UpdateDeviceScreen({
-    Key? key,
+    super.key,
     required this.device,
-  }) : super(key: key);
+  });
 
   @override
   State<UpdateDeviceScreen> createState() => _UpdateDeviceScreenState();

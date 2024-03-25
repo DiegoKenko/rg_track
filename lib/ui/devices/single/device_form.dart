@@ -19,10 +19,10 @@ class DeviceForm extends StatefulWidget {
   final EnumFormOption formOption;
 
   const DeviceForm({
-    Key? key,
+    super.key,
     required this.device,
     required this.formOption,
-  }) : super(key: key);
+  });
 
   @override
   State<DeviceForm> createState() => _DeviceFormState();

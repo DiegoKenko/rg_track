@@ -10,10 +10,10 @@ class ShowVehicleScreen extends StatefulWidget {
   final Vehicle vehicle;
 
   const ShowVehicleScreen({
-    Key? key,
+    super.key,
     required this.vehicle,
     this.id,
-  }) : super(key: key);
+  });
 
   @override
   State<ShowVehicleScreen> createState() => _ShowVehicleScreenState();

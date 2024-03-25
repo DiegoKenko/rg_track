@@ -11,7 +11,7 @@ class Message extends StatelessWidget {
   final MessageAction? secondAction;
 
   const Message({
-    Key? key,
+    super.key,
     required this.title,
     required this.body,
     required this.icon,
@@ -19,7 +19,7 @@ class Message extends StatelessWidget {
     this.action,
     this.secondActionText,
     this.secondAction,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

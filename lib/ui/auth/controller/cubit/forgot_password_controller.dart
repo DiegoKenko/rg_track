@@ -4,7 +4,7 @@ import 'package:rg_track/ui/auth/controller/cubit/forgot_password_state.dart';
 
 class ForgotPasswordCubit extends Cubit<ForgotPasswordState> {
   ForgotPasswordCubit() : super(ForgotPasswordInitialState());
-  AuthService _authService = AuthService.instance;
+  final AuthService _authService = AuthService.instance;
 
   Future<void> sendEmail(String email) async {
     emit(const LoadingForgotPasswordState());

@@ -20,7 +20,7 @@ class IndexMovingStopPage extends StatefulWidget {
 }
 
 class IndexMovingStopPageState extends State<IndexMovingStopPage> {
-  DateTime _lastUpdate = DateTime.now();
+  final DateTime _lastUpdate = DateTime.now();
   List<Vehicle> vehicles = [];
 
   @override

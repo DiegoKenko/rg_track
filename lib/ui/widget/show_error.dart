@@ -5,7 +5,7 @@ import 'package:rg_track/model/error_entity.dart';
 class ShowError extends StatelessWidget {
   final ErrorEntity? exception;
 
-  const ShowError(this.exception, {Key? key}) : super(key: key);
+  const ShowError(this.exception, {super.key});
 
   @override
   Widget build(BuildContext context) {

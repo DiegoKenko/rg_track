@@ -6,8 +6,7 @@ import 'package:rg_track/ui/widget/app_body.dart';
 import 'package:rg_track/ui/widget/app_logo.dart';
 
 class StoreCustomerScreen extends StatelessWidget {
-  const StoreCustomerScreen({Key? key, required this.customer})
-      : super(key: key);
+  const StoreCustomerScreen({super.key, required this.customer});
   final Customer customer;
 
   @override

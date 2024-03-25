@@ -15,7 +15,7 @@ import 'package:rg_track/utils/go_route_extension.dart';
 import 'package:rg_track/utils/screen_utils.dart';
 
 class IndexVehicleEventsPage extends StatefulWidget {
-  const IndexVehicleEventsPage({Key? key}) : super(key: key);
+  const IndexVehicleEventsPage({super.key});
 
   @override
   State<IndexVehicleEventsPage> createState() => _IndexVehicleEventsPageState();

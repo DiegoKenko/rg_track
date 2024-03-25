@@ -32,9 +32,9 @@ class VehicleForm extends StatefulWidget {
   const VehicleForm({
     required this.vehicle,
     required this.formOption,
-    Key? key,
+    super.key,
     this.enable = true,
-  }) : super(key: key);
+  });
 
   @override
   State<VehicleForm> createState() => _VehicleFormState();
@@ -594,8 +594,9 @@ class _VehicleFormState extends State<VehicleForm> {
                         if (widget.vehicle.customer?.id?.isNotEmpty ?? false) {
                           Customer? customer = customers.firstWhereOrNull(
                               (e) => e.id == widget.vehicle.customer!.id);
-                          if (customer != null)
+                          if (customer != null) {
                             widget.vehicle.customer = customer;
+                          }
                         }
 
                         return Wrap(
@@ -618,8 +619,9 @@ class _VehicleFormState extends State<VehicleForm> {
                                     return Validator(value?.toString())();
                                   },
                                   onChanged: (Customer? value) {
-                                    if (value != null)
+                                    if (value != null) {
                                       widget.vehicle.customer = value;
+                                    }
                                   },
                                   isDense: false,
                                   decoration: InputDecoration(
@@ -703,8 +705,9 @@ class _VehicleFormState extends State<VehicleForm> {
                                 false) {
                               Device? device = devices.firstWhereOrNull(
                                   (e) => e.id == widget.vehicle.deviceMainId);
-                              if (device != null)
+                              if (device != null) {
                                 widget.vehicle.newDeviceMain = device;
+                              }
                             }
                             if (widget.vehicle.deviceRedundancyId?.isNotEmpty ??
                                 false) {
@@ -712,8 +715,9 @@ class _VehicleFormState extends State<VehicleForm> {
                                   devices.firstWhereOrNull((e) =>
                                       e.id ==
                                       widget.vehicle.deviceRedundancyId);
-                              if (deviceRedundancy != null)
+                              if (deviceRedundancy != null) {
                                 widget.vehicle.newDeviceMain = deviceRedundancy;
+                              }
                             }
                             return Wrap(
                               spacing: 16,
@@ -764,9 +768,10 @@ class _VehicleFormState extends State<VehicleForm> {
                                       autovalidateMode:
                                           AutovalidateMode.onUserInteraction,
                                       onChanged: (Device? value) {
-                                        if (value != null)
+                                        if (value != null) {
                                           widget.vehicle.newDeviceRedundancy =
                                               value;
+                                        }
                                       },
                                       decoration: InputDecoration(
                                         labelText: "Equipamento de redundância",

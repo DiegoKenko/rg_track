@@ -8,7 +8,7 @@ import 'package:rg_track/ui/widget/app_logo.dart';
 import 'package:rg_track/utils/context_extension.dart';
 
 class StorePlanScreen extends StatelessWidget {
-  const StorePlanScreen({Key? key}) : super(key: key);
+  const StorePlanScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

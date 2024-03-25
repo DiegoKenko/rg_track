@@ -12,10 +12,10 @@ class Points {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['tm'] = this.tm;
-    data['lat'] = this.lat;
-    data['lng'] = this.lng;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['tm'] = tm;
+    data['lat'] = lat;
+    data['lng'] = lng;
     return data;
   }
 }

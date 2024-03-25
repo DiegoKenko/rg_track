@@ -17,7 +17,7 @@ class TextItemTripDetailWidget extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            title.toUpperCase() + ' : ',
+            '${title.toUpperCase()} : ',
             style: const TextStyle(
                 color: primaryColor, fontSize: 13, fontWeight: FontWeight.bold),
           ),

@@ -10,10 +10,10 @@ class UpdateUserScreen extends StatefulWidget {
   final String? id;
 
   const UpdateUserScreen({
-    Key? key,
+    super.key,
     required this.user,
     this.id,
-  }) : super(key: key);
+  });
 
   @override
   State<UpdateUserScreen> createState() => _UpdateUserScreenState();

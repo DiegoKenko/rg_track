@@ -109,7 +109,7 @@ class _MovingStopMapWideState extends State<MovingStopMapWide> {
                 if (state.vehicleTrailSelected.trails.isNotEmpty) {
                   _markerList.add(Marker(
                     icon: beginMarker,
-                    markerId: MarkerId(state.vehicle.simpleID + 'start'),
+                    markerId: MarkerId('${state.vehicle.simpleID}start'),
                     position: LatLng(
                         state.vehicleTrailSelected.trails.first.latitude,
                         state.vehicleTrailSelected.trails.first.longitude),
@@ -119,7 +119,7 @@ class _MovingStopMapWideState extends State<MovingStopMapWide> {
                   ));
                   _markerList.add(Marker(
                     icon: endMarker,
-                    markerId: MarkerId(state.vehicle.simpleID + 'end'),
+                    markerId: MarkerId('${state.vehicle.simpleID}end'),
                     position: LatLng(
                         state.vehicleTrailSelected.trails.last.latitude,
                         state.vehicleTrailSelected.trails.last.longitude),
@@ -222,8 +222,8 @@ class _MovingStopMapWideState extends State<MovingStopMapWide> {
                               target: defaultLatLong,
                               zoom: 13,
                             ),
-                            markers: Set.from([]),
-                            polylines: Set.from([]),
+                            markers: const <Marker>{},
+                            polylines: const <Polyline>{},
                           ),
                         ),
                       ),

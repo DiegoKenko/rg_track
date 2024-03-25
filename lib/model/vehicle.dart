@@ -43,7 +43,7 @@ class Vehicle {
   bool? fineConsultation;
   DateTime? updatedAt;
   DateTime? createdAt;
-  List<Device> _devices = [];
+  final List<Device> _devices = [];
   List<CustomerVehicle> customerVehicle = [];
   Customer? customer;
   String? customerKind;
@@ -61,13 +61,7 @@ class Vehicle {
   }
 
   String get description {
-    return ((manufacturer ?? '') +
-            ' ' +
-            (model ?? '') +
-            ' ' +
-            (year ?? '') +
-            ' - ' +
-            (licensePlate ?? ''))
+    return ('${manufacturer ?? ''} ${model ?? ''} ${year ?? ''} - ${licensePlate ?? ''}')
         .trim();
   }
 
@@ -351,7 +345,7 @@ class Vehicle {
       vehicleKind: map['vehicle_kind'] != null
           ? VehicleKind.values.firstWhere(
               (element) => element.description == map['vehicle_kind'],
-              orElse: null)
+              orElse: () => VehicleKind.carro)
           : null,
       withoutTransmission: map['without_transmission'] as bool?,
       year: map['year'],

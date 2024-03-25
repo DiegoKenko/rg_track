@@ -15,10 +15,10 @@ class ShowPlanScreen extends StatefulWidget {
   final Plan? plan;
 
   const ShowPlanScreen({
-    Key? key,
+    super.key,
     this.id,
     this.plan,
-  }) : super(key: key);
+  });
 
   @override
   State<ShowPlanScreen> createState() => _ShowPlanScreenState();

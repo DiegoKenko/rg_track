@@ -25,7 +25,7 @@ class CustomerFormWidget extends StatefulWidget {
   final EdgeInsets? padding;
 
   const CustomerFormWidget({
-    Key? key,
+    super.key,
     required this.onSelect,
     required this.customers,
     this.title = "Cliente",
@@ -38,11 +38,10 @@ class CustomerFormWidget extends StatefulWidget {
   })  : onListChange = null,
         onAdd = null,
         onRemove = null,
-        initialSelectedCustomers = null,
-        super(key: key);
+        initialSelectedCustomers = null;
 
   const CustomerFormWidget.list({
-    Key? key,
+    super.key,
     required this.onListChange,
     required this.customers,
     this.title = "Cliente",
@@ -55,8 +54,7 @@ class CustomerFormWidget extends StatefulWidget {
     this.padding,
     this.initialValue,
     this.initialSelectedCustomers = const [],
-  })  : onSelect = null,
-        super(key: key);
+  })  : onSelect = null;
 
   @override
   State<CustomerFormWidget> createState() => _CustomerFormWidgetState();

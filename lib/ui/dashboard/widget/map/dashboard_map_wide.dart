@@ -77,7 +77,7 @@ class _DashboardMapWideState extends State<DashboardMapWide> {
                   zoom: 16,
                 ),
                 markers: Set.from(markers),
-                polylines: Set.from([]),
+                polylines: const <Polyline>{},
               ),
             ),
           );

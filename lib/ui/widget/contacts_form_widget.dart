@@ -14,14 +14,14 @@ class ContactsFormWidget extends StatefulWidget {
   final FocusNode? focusNode, nextFocus;
 
   const ContactsFormWidget({
-    Key? key,
+    super.key,
     required this.contacts,
     this.enable = true,
     this.canEmpty = true,
     this.onChange,
     this.focusNode,
     this.nextFocus,
-  }) : super(key: key);
+  });
 
   @override
   State<ContactsFormWidget> createState() => _ContactsFormWidgetState();
@@ -45,7 +45,7 @@ class _ContactsFormWidgetState extends State<ContactsFormWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const FormTitle('Contatos'),
-        ..._contacts.map(_makeModel).toList(),
+        ..._contacts.map(_makeModel),
         Visibility(
           visible: widget.enable,
           child: Opacity(

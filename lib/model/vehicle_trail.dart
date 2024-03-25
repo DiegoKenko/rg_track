@@ -69,7 +69,7 @@ class VehicleTrail {
   factory VehicleTrail.fromFlespiChannelMessage(
       List<FlespiChannelMessage> messages) {
     VehicleTrail ret = VehicleTrail.empty();
-    messages.forEach((element) {
+    for (var element in messages) {
       double lastLongitude = 0;
       double lastLatitude = 0;
       if (!(lastLatitude == element.positionLatitude &&
@@ -82,7 +82,7 @@ class VehicleTrail {
           lastLatitude = element.positionLatitude!;
         }
       }
-    });
+    }
 
     return ret;
   }

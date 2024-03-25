@@ -10,7 +10,7 @@ class FlespiServiceChannelMessage {
   final String _baseUrl = flespiBasePath + flespiDevicePath;
   final String _messagePath = flespiMessagePath;
   final FlespiServiceMultiple _flespiServiceMultiple = FlespiServiceMultiple();
-  FlespiServiceChannelMessage() {}
+  FlespiServiceChannelMessage();
 
   Future<Result<List<FlespiChannelMessage>, ErrorEntity>> getMessages(
     String deviceId, {
@@ -19,7 +19,7 @@ class FlespiServiceChannelMessage {
     bool positionValid = true,
   }) async {
     return await _flespiServiceMultiple.get(
-      _baseUrl + '/' + deviceId + _messagePath,
+      '$_baseUrl/$deviceId$_messagePath',
       params: {
         "data": const JsonEncoder().convert({
           "count": limit,

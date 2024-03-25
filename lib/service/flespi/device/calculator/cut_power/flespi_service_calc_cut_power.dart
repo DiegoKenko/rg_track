@@ -14,7 +14,7 @@ class FlespiServiceCalcCutPower {
       return Failure(ErrorEntity(code: EnumErrorCode.e04210, message: ''));
     }
     return await _flespiServiceMultiple
-        .post(_baseChannelUrl + '/' + deviceId + flespiCalculatePath, data: {
+        .post('$_baseChannelUrl/$deviceId$flespiCalculatePath', data: {
       "calc_id": flespiCalcCutPower,
     }).fold((success) {
       return success

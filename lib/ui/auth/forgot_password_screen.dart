@@ -10,7 +10,7 @@ import 'package:rg_track/ui/widget/app_logo.dart';
 import 'package:rg_track/utils/go_route_extension.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({Key? key}) : super(key: key);
+  const ForgotPasswordScreen({super.key});
 
   @override
   State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
@@ -94,7 +94,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                           ))
                       : ElevatedButton(
                           onPressed: () {
-                            if (!(state is ForgotPasswordSendState)) {
+                            if (state is! ForgotPasswordSendState) {
                               _saveForm();
                             }
                           },

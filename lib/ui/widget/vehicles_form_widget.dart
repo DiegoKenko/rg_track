@@ -16,13 +16,13 @@ class VehiclesFormWidget extends StatefulWidget {
   final ModelAction<Vehicle>? onAdded;
 
   const VehiclesFormWidget({
-    Key? key,
+    super.key,
     this.customer,
     this.enable = true,
     this.onChange,
     this.onRemoved,
     this.onAdded,
-  }) : super(key: key);
+  });
 
   @override
   State<VehiclesFormWidget> createState() => _VehiclesFormWidgetState();
@@ -74,7 +74,7 @@ class _VehiclesFormWidgetState extends State<VehiclesFormWidget> {
                             widget.onChange?.call(_vehicles);
                             setState(() {});
                           }))
-                      .toList(),
+                      ,
                   SizedBox(
                       width: 200,
                       child: Padding(

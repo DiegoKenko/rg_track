@@ -11,11 +11,10 @@ class PlanCard extends StatelessWidget {
   final ModelAction<Plan> onUpdateAction;
 
   const PlanCard(this.plan,
-      {Key? key,
+      {super.key,
       required this.onDeleteAction,
       required this.onShowAction,
-      required this.onUpdateAction})
-      : super(key: key);
+      required this.onUpdateAction});
 
   @override
   Widget build(BuildContext context) {

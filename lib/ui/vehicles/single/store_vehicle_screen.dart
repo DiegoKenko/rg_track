@@ -7,7 +7,7 @@ import 'package:rg_track/ui/widget/app_body.dart';
 import 'package:rg_track/ui/widget/app_logo.dart';
 
 class CreateVehicleScreen extends StatefulWidget {
-  const CreateVehicleScreen({Key? key}) : super(key: key);
+  const CreateVehicleScreen({super.key});
 
   @override
   State<CreateVehicleScreen> createState() => _CreateVehicleScreenState();

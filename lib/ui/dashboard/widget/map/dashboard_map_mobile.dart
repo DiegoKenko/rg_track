@@ -75,7 +75,7 @@ class _DashboardMapMobileState extends State<DashboardMapMobile> {
                   zoom: 14,
                 ),
                 markers: Set.from(markers),
-                polylines: Set.from([]),
+                polylines: const <Polyline>{},
               ),
             ),
           );

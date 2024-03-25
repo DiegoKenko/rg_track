@@ -29,12 +29,12 @@ class FlespiDeviceStatus {
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['channel_id'] = this.channelId;
-    data['source'] = this.source;
-    data['last_active'] = this.lastActive;
-    data['device_id'] = this.deviceId;
-    data['ident'] = this.ident;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['channel_id'] = channelId;
+    data['source'] = source;
+    data['last_active'] = lastActive;
+    data['device_id'] = deviceId;
+    data['ident'] = ident;
     return data;
   }
 }

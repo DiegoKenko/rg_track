@@ -19,13 +19,13 @@ class MovingStopCharts extends StatelessWidget {
         SizedBox(
           height: 120,
           width: 150,
-          child: DChartGauge(
+          child: DChartPieO(
             data: [
-              {'domain': 'Normal', 'measure': ok},
-              {'domain': 'Sem Comunicação', 'measure': warning},
-              {'domain': 'Atenção', 'measure': attention},
+              OrdinalData(domain: 'Normal', measure: ok),
+              OrdinalData(domain: 'Sem Comunicação', measure: warning),
+              OrdinalData(domain: 'Atenção', measure: attention),
             ],
-            fillColor: (Map<String, dynamic> pieData, int? index) {
+            /*  fillColor: (Map<String, dynamic> pieData, int? index) {
               switch (pieData['domain']) {
                 case 'Atenção':
                   return const Color(0xFFD2232A);
@@ -38,7 +38,7 @@ class MovingStopCharts extends StatelessWidget {
             showLabelLine: false,
             pieLabel: (Map pieData, int? index) {
               return "";
-            },
+            }, */
           ),
         ),
         Container(

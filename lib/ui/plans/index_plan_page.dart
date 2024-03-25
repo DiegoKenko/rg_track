@@ -16,7 +16,7 @@ import 'package:rg_track/utils/go_route_extension.dart';
 import 'package:rg_track/utils/screen_utils.dart';
 
 class IndexPlansPage extends StatefulWidget {
-  const IndexPlansPage({Key? key}) : super(key: key);
+  const IndexPlansPage({super.key});
 
   @override
   State<IndexPlansPage> createState() => _IndexPlansPageState();

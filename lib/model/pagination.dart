@@ -47,7 +47,7 @@ class Pagination<R> {
 
   factory Pagination.fromMap(
     dynamic map,
-    Function(Map<String, dynamic> data) parseData,
+    R Function(Map<String, dynamic> data) parseData,
   ) {
     Pagination<R> pag = Pagination<R>._empty();
     if (map is Map<String, dynamic>) {
@@ -57,7 +57,6 @@ class Pagination<R> {
               .whereType<Map>()
               .cast<Map<String, dynamic>>()
               .map(parseData)
-              .toList()
         ],
         currentPage: map['current_page'],
         from: map['from'],

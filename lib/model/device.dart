@@ -35,7 +35,7 @@ class Device {
   String get userIdSimple => (userId ?? '').substring(0, 6);
 
   String get imeiFormatted {
-    return this.imei?.replaceAllMapped(
+    return imei?.replaceAllMapped(
             RegExp(r'^(\d{5})(\d{9})(\d)$'),
             (Match match) =>
                 "${match.group(1)}-${match.group(2)}-${match.group(3)}") ??
@@ -175,31 +175,31 @@ class Device {
     );
 
     return Device(
-      brand: model?.brand ?? this.brand,
+      brand: model?.brand ?? brand,
       model: model ?? this.model,
-      serial: serial ?? this.serial,
-      controlNumber: controlNumber ?? this.controlNumber,
+      serial: serial ?? serial,
+      controlNumber: controlNumber ?? controlNumber,
       imei: flespiDevice.imei,
-      password: password ?? this.password,
-      firmwareVersion: firmwareVersion ?? this.firmwareVersion,
-      busy: busy ?? this.busy,
-      mobileOperator: mobileOperator ?? this.mobileOperator,
-      habilitatedAt: habilitatedAt ?? this.habilitatedAt,
-      simNumber: simNumber ?? this.simNumber,
-      simPin: simPin ?? this.simPin,
-      simPuk: simPuk ?? this.simPuk,
-      simApn: simApn ?? this.simApn,
-      simApnUser: simApnUser ?? this.simApnUser,
-      simApnPassword: simApnPassword ?? this.simApnPassword,
-      simIccid: simIccid ?? this.simIccid,
-      updatedAt: updatedAt ?? this.updatedAt,
-      createdAt: createdAt ?? this.createdAt,
-      userId: userId ?? this.userId,
-      vehicleId: vehicleId ?? this.vehicleId,
-      channelId: flespiDevice.channelId ?? this.channelId,
-      id: flespiDevice.id?.toString() ?? this.id,
-      cid: flespiDevice.cid?.toString() ?? this.cid,
-      installation: installation ?? this.installation,
+      password: password ?? password,
+      firmwareVersion: firmwareVersion ?? firmwareVersion,
+      busy: busy ?? busy,
+      mobileOperator: mobileOperator ?? mobileOperator,
+      habilitatedAt: habilitatedAt ?? habilitatedAt,
+      simNumber: simNumber ?? simNumber,
+      simPin: simPin ?? simPin,
+      simPuk: simPuk ?? simPuk,
+      simApn: simApn ?? simApn,
+      simApnUser: simApnUser ?? simApnUser,
+      simApnPassword: simApnPassword ?? simApnPassword,
+      simIccid: simIccid ?? simIccid,
+      updatedAt: updatedAt ?? updatedAt,
+      createdAt: createdAt ?? createdAt,
+      userId: userId ?? userId,
+      vehicleId: vehicleId ?? vehicleId,
+      channelId: flespiDevice.channelId ?? channelId,
+      id: flespiDevice.id?.toString() ?? id,
+      cid: flespiDevice.cid?.toString() ?? cid,
+      installation: installation ?? installation,
     );
   }
 

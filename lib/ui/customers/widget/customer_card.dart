@@ -13,11 +13,10 @@ class CustomerCard extends StatelessWidget {
   final ModelAction<Customer> onUpdateAction;
 
   const CustomerCard(this.customer,
-      {Key? key,
+      {super.key,
       required this.onDeleteAction,
       required this.onShowAction,
-      required this.onUpdateAction})
-      : super(key: key);
+      required this.onUpdateAction});
 
   @override
   Widget build(BuildContext context) {

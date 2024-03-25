@@ -22,12 +22,12 @@ class PlanForm extends StatefulWidget {
   final bool enable;
 
   const PlanForm({
-    Key? key,
+    super.key,
     this.onSave,
     this.willPopUp,
     this.enable = true,
     this.plan,
-  }) : super(key: key);
+  });
 
   @override
   State<PlanForm> createState() => _PlanFormState();

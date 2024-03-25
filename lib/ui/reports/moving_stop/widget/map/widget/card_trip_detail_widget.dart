@@ -16,7 +16,7 @@ class CardTripDetailWidget extends StatelessWidget {
           Expanded(
             child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Wrap(children: details, spacing: 5)),
+                child: Wrap(spacing: 5, children: details)),
           )
         ],
       ),

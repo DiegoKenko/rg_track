@@ -7,7 +7,7 @@ import 'package:rg_track/ui/widget/app_body.dart';
 import 'package:rg_track/ui/widget/app_logo.dart';
 
 class StoreUserScreen extends StatelessWidget {
-  const StoreUserScreen({Key? key}) : super(key: key);
+  const StoreUserScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,22 +7,22 @@ import 'package:rg_track/model/user.dart';
 class Customer extends UserEntity {
   Customer({
     required String userParentId,
-    String? id,
-    String? name,
-    String? email,
-    String? phone,
-    String? document,
-    bool isWhatsApp = false,
-    DateTime? emailVerifiedAt,
-    DateTime? phoneVerifiedAt,
-    String? startOfTheJourney,
-    String? endOfTheJourney,
-    String? status,
-    String? kind,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    String? notificationToken,
-    bool rememberSession = true,
+    super.id,
+    super.name,
+    super.email,
+    super.phone,
+    super.document,
+    super.isWhatsApp,
+    super.emailVerifiedAt,
+    super.phoneVerifiedAt,
+    super.startOfTheJourney,
+    super.endOfTheJourney,
+    super.status = null,
+    super.kind = null,
+    super.createdAt,
+    super.updatedAt,
+    super.notificationToken,
+    super.rememberSession = true,
     List<Permission>? abilities,
     this.fantasyName,
     this.fullName,
@@ -30,22 +30,6 @@ class Customer extends UserEntity {
     this.customerParent,
   }) : super.commom(
           parentId: userParentId,
-          id: id,
-          name: name,
-          email: email,
-          phone: phone,
-          document: document,
-          isWhatsApp: isWhatsApp,
-          emailVerifiedAt: emailVerifiedAt,
-          phoneVerifiedAt: phoneVerifiedAt,
-          startOfTheJourney: startOfTheJourney,
-          endOfTheJourney: endOfTheJourney,
-          status: status,
-          kind: kind,
-          createdAt: createdAt,
-          updatedAt: updatedAt,
-          notificationToken: notificationToken,
-          rememberSession: rememberSession,
         );
 
   List<Contact>? contacts;
@@ -55,6 +39,7 @@ class Customer extends UserEntity {
   String? socialName;
   String? fantasyName;
 
+  @override
   String get simpleID => id?.substring(0, 6) ?? '';
 
   factory Customer.fromMap(Map<String, dynamic> map) {
@@ -94,6 +79,7 @@ class Customer extends UserEntity {
 
   String get bestPhoneNumber => phone ?? contacts?.firstOrNull?.phone ?? '';
 
+  @override
   Map<String, dynamic> toMap() {
     return compact({
       'id': id,
@@ -117,6 +103,7 @@ class Customer extends UserEntity {
     });
   }
 
+  @override
   Customer copyWith({
     String? id,
     String? name,

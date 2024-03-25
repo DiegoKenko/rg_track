@@ -11,13 +11,11 @@ class AppLogo extends StatelessWidget {
   };
   final String _current;
 
-  AppLogo({Key? key})
-      : _current = 'vertical',
-        super(key: key);
+  AppLogo({super.key})
+      : _current = 'vertical';
 
-  AppLogo.horizontal({Key? key})
-      : _current = 'horizontal',
-        super(key: key);
+  AppLogo.horizontal({super.key})
+      : _current = 'horizontal';
 
   @override
   Widget build(BuildContext context) {

@@ -5,8 +5,8 @@ class CardCell extends StatelessWidget {
   const CardCell(
     this.title,
     this.content, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final String title;
   final String content;

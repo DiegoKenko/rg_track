@@ -13,11 +13,11 @@ class VehiclesTableView extends StatelessWidget {
 
   const VehiclesTableView(
     this.vehicles, {
-    Key? key,
+    super.key,
     required this.onDeleteAction,
     required this.onShowAction,
     required this.onUpdateAction,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
