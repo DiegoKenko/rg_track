@@ -5,6 +5,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/rgtrack_vertical_light" />
+            android:src="@mipmap/rgtrack_vertical_dark" />
     </item>
 </layer-list>
