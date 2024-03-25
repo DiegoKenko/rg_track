@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "620439685726",
+    "project_id": "rgtrack-be138",
+    "storage_bucket": "rgtrack-be138.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620439685726:android:d220be1c3f97689f4882cf",
+        "android_client_info": {
+          "package_name": "com.example.rg_track"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620439685726-ogskre9usm23numk3on6535r5qhd57pl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuWy39k8HHv_eWOpIBgQxS6i3YraVrj3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620439685726-ogskre9usm23numk3on6535r5qhd57pl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "620439685726-9aqpg0looc6euqf8fvpk794auoqcpvdc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.rgtrack.rgTrack"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
